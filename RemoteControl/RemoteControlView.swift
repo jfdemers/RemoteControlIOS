@@ -8,23 +8,23 @@
 
 import SwiftUI
 
-let CIRCLE_WIDTH: CGFloat = 128;
-let HALF_CIRCLE_WIDTH: CGFloat = CIRCLE_WIDTH / 2;
-
-struct RemoteControl: View {
+struct RemoteControlView: View {
+    @State var axisController1 = TwoAxisController()
+    @State var axisController2 = TwoAxisController()
+    
     var body: some View {
         HStack {
-            TwoAxisControl()
+            TwoAxisControl(controller: axisController1)
                 .padding(.leading, 30)
             Spacer()
-            TwoAxisControl()
+            TwoAxisControl(controller: axisController2)
                 .padding(.trailing, 30)
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RemoteControlView_Previews: PreviewProvider {
     static var previews: some View {
-        RemoteControl().previewLayout(.device)
+        RemoteControlView().previewLayout(.device)
     }
 }

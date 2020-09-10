@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		BB25F26025084D8300DB1E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25F25F25084D8300DB1E60 /* AppDelegate.swift */; };
 		BB25F26225084D8300DB1E60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25F26125084D8300DB1E60 /* SceneDelegate.swift */; };
-		BB25F26425084D8300DB1E60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25F26325084D8300DB1E60 /* ContentView.swift */; };
+		BB25F26425084D8300DB1E60 /* RemoteControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25F26325084D8300DB1E60 /* RemoteControlView.swift */; };
 		BB25F26625084D8300DB1E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB25F26525084D8300DB1E60 /* Assets.xcassets */; };
 		BB25F26925084D8300DB1E60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB25F26825084D8300DB1E60 /* Preview Assets.xcassets */; };
 		BB25F26C25084D8300DB1E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB25F26A25084D8300DB1E60 /* LaunchScreen.storyboard */; };
 		BB25F27725084D8400DB1E60 /* RemoteControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25F27625084D8400DB1E60 /* RemoteControlTests.swift */; };
 		BB25F28225084D8400DB1E60 /* RemoteControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25F28125084D8400DB1E60 /* RemoteControlUITests.swift */; };
+		BB7A839F2509AF18009C7675 /* TwoAxisControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A839E2509AF18009C7675 /* TwoAxisControl.swift */; };
+		BB7A83A12509B11F009C7675 /* TwoAxisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A83A02509B11F009C7675 /* TwoAxisController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		BB25F25C25084D8300DB1E60 /* RemoteControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB25F25F25084D8300DB1E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB25F26125084D8300DB1E60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB25F26325084D8300DB1E60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB25F26325084D8300DB1E60 /* RemoteControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlView.swift; sourceTree = "<group>"; };
 		BB25F26525084D8300DB1E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB25F26825084D8300DB1E60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB25F26B25084D8300DB1E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		BB25F27D25084D8400DB1E60 /* RemoteControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB25F28125084D8400DB1E60 /* RemoteControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlUITests.swift; sourceTree = "<group>"; };
 		BB25F28325084D8400DB1E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB7A839E2509AF18009C7675 /* TwoAxisControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoAxisControl.swift; sourceTree = "<group>"; };
+		BB7A83A02509B11F009C7675 /* TwoAxisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoAxisController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 			children = (
 				BB25F25F25084D8300DB1E60 /* AppDelegate.swift */,
 				BB25F26125084D8300DB1E60 /* SceneDelegate.swift */,
-				BB25F26325084D8300DB1E60 /* ContentView.swift */,
+				BB25F26325084D8300DB1E60 /* RemoteControlView.swift */,
 				BB25F26525084D8300DB1E60 /* Assets.xcassets */,
 				BB25F26A25084D8300DB1E60 /* LaunchScreen.storyboard */,
 				BB25F26D25084D8300DB1E60 /* Info.plist */,
 				BB25F26725084D8300DB1E60 /* Preview Content */,
+				BB7A839E2509AF18009C7675 /* TwoAxisControl.swift */,
+				BB7A83A02509B11F009C7675 /* TwoAxisController.swift */,
 			);
 			path = RemoteControl;
 			sourceTree = "<group>";
@@ -269,7 +275,9 @@
 			files = (
 				BB25F26025084D8300DB1E60 /* AppDelegate.swift in Sources */,
 				BB25F26225084D8300DB1E60 /* SceneDelegate.swift in Sources */,
-				BB25F26425084D8300DB1E60 /* ContentView.swift in Sources */,
+				BB25F26425084D8300DB1E60 /* RemoteControlView.swift in Sources */,
+				BB7A83A12509B11F009C7675 /* TwoAxisController.swift in Sources */,
+				BB7A839F2509AF18009C7675 /* TwoAxisControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
