@@ -17,6 +17,7 @@
 		BB25F28225084D8400DB1E60 /* RemoteControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25F28125084D8400DB1E60 /* RemoteControlUITests.swift */; };
 		BB7A839F2509AF18009C7675 /* TwoAxisControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A839E2509AF18009C7675 /* TwoAxisControl.swift */; };
 		BB7A83A12509B11F009C7675 /* TwoAxisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A83A02509B11F009C7675 /* TwoAxisController.swift */; };
+		BBC67F94250AC36600D69809 /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC67F93250AC36600D69809 /* BLEController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BB25F28325084D8400DB1E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7A839E2509AF18009C7675 /* TwoAxisControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoAxisControl.swift; sourceTree = "<group>"; };
 		BB7A83A02509B11F009C7675 /* TwoAxisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoAxisController.swift; sourceTree = "<group>"; };
+		BBC67F93250AC36600D69809 /* BLEController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				BB25F26725084D8300DB1E60 /* Preview Content */,
 				BB7A839E2509AF18009C7675 /* TwoAxisControl.swift */,
 				BB7A83A02509B11F009C7675 /* TwoAxisController.swift */,
+				BBC67F93250AC36600D69809 /* BLEController.swift */,
 			);
 			path = RemoteControl;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				BB25F26425084D8300DB1E60 /* RemoteControlView.swift in Sources */,
 				BB7A83A12509B11F009C7675 /* TwoAxisController.swift in Sources */,
 				BB7A839F2509AF18009C7675 /* TwoAxisControl.swift in Sources */,
+				BBC67F94250AC36600D69809 /* BLEController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ import SwiftUI
 struct RemoteControlView: View {
     @State var axisController1 = TwoAxisController()
     @State var axisController2 = TwoAxisController()
+    @ObservedObject var bleController = BLEController.defaultController
     
     var body: some View {
         HStack {
