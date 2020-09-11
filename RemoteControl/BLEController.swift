@@ -11,13 +11,15 @@ import CoreBluetooth
 
 class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     var centralManager: CBCentralManager!
-    var myPeripheral: CBPeripheral!
     
-    fileprivate var setupDpne = false
+    @Published var connectedDevice: Device?
+    @Published var devices: [Device] = []
+    
+    fileprivate var setupDone = false
     
     static var _defaultController = BLEController()
     static var defaultController: BLEController {
-        if (!_defaultController.setupDpne) {
+        if (!_defaultController.setupDone) {
             _defaultController.setup()
         }
         
@@ -26,9 +28,11 @@ class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPer
     
     func setup() {
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        setupDone = true
     }
     
     func scanDevices() {
+        devices = []
         centralManager.scanForPeripherals(withServices: [CBUUID(string: "4b541423-23b7-48e7-8a4c-a00ef3c23c7b")], options: nil)
     }
     
@@ -45,7 +49,34 @@ class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPer
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         if let pname = peripheral.name {
-            print(pname)
+            print("Found peripheral: \(pname)")
+            
+            var newArray = devices
+            newArray.append(Device(peripheral: peripheral))
+            devices = newArray
         }
+    }
+    
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        connectedDevice = deviceByUUID(peripheral.identifier)
+        peripheral.discoverServices([CBUUID(string: "4b541423-23b7-48e7-8a4c-a00ef3c23c7b")])
+    }
+    
+    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        connectedDevice = nil
+    }
+    
+    func connectToDevice(device: Device) {
+        centralManager.connect(device.peripheral, options: nil)
+    }
+    
+    private func deviceByUUID(_ id: UUID) -> Device? {
+        for d in devices {
+            if d.ID == id.uuidString {
+                return d
+            }
+        }
+        
+        return nil
     }
 }

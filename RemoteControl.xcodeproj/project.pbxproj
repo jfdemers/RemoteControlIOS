@@ -17,6 +17,9 @@
 		BB25F28225084D8400DB1E60 /* RemoteControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25F28125084D8400DB1E60 /* RemoteControlUITests.swift */; };
 		BB7A839F2509AF18009C7675 /* TwoAxisControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A839E2509AF18009C7675 /* TwoAxisControl.swift */; };
 		BB7A83A12509B11F009C7675 /* TwoAxisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A83A02509B11F009C7675 /* TwoAxisController.swift */; };
+		BB8C59B3250B007400740663 /* SelectDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C59B2250B007400740663 /* SelectDeviceView.swift */; };
+		BB8C59B5250B03E600740663 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C59B4250B03E600740663 /* Device.swift */; };
+		BB8C59B7250B056100740663 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C59B6250B056100740663 /* MainView.swift */; };
 		BBC67F94250AC36600D69809 /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC67F93250AC36600D69809 /* BLEController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		BB25F28325084D8400DB1E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7A839E2509AF18009C7675 /* TwoAxisControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoAxisControl.swift; sourceTree = "<group>"; };
 		BB7A83A02509B11F009C7675 /* TwoAxisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoAxisController.swift; sourceTree = "<group>"; };
+		BB8C59B2250B007400740663 /* SelectDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDeviceView.swift; sourceTree = "<group>"; };
+		BB8C59B4250B03E600740663 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		BB8C59B6250B056100740663 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BBC67F93250AC36600D69809 /* BLEController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +121,9 @@
 				BB7A839E2509AF18009C7675 /* TwoAxisControl.swift */,
 				BB7A83A02509B11F009C7675 /* TwoAxisController.swift */,
 				BBC67F93250AC36600D69809 /* BLEController.swift */,
+				BB8C59B2250B007400740663 /* SelectDeviceView.swift */,
+				BB8C59B4250B03E600740663 /* Device.swift */,
+				BB8C59B6250B056100740663 /* MainView.swift */,
 			);
 			path = RemoteControl;
 			sourceTree = "<group>";
@@ -277,11 +286,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB25F26025084D8300DB1E60 /* AppDelegate.swift in Sources */,
+				BB8C59B7250B056100740663 /* MainView.swift in Sources */,
 				BB25F26225084D8300DB1E60 /* SceneDelegate.swift in Sources */,
 				BB25F26425084D8300DB1E60 /* RemoteControlView.swift in Sources */,
 				BB7A83A12509B11F009C7675 /* TwoAxisController.swift in Sources */,
+				BB8C59B3250B007400740663 /* SelectDeviceView.swift in Sources */,
 				BB7A839F2509AF18009C7675 /* TwoAxisControl.swift in Sources */,
 				BBC67F94250AC36600D69809 /* BLEController.swift in Sources */,
+				BB8C59B5250B03E600740663 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
