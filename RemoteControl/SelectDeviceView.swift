@@ -14,7 +14,7 @@ struct SelectDeviceView: View {
     var body: some View {
         VStack {
             List {
-                ForEach(self.bleController.devices) { device in
+                ForEach(self.bleController.deviceList) { device in
                     NavigationLink(destination: RemoteControlView()) {
                     if (device.peripheral.name != nil) {
                         Text(device.peripheral.name!)
