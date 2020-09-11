@@ -21,6 +21,7 @@
 		BB8C59B5250B03E600740663 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C59B4250B03E600740663 /* Device.swift */; };
 		BB8C59B7250B056100740663 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C59B6250B056100740663 /* MainView.swift */; };
 		BBC67F94250AC36600D69809 /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC67F93250AC36600D69809 /* BLEController.swift */; };
+		BBC67F9A250C00B600D69809 /* SelectgDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC67F99250C00B600D69809 /* SelectgDeviceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		BB8C59B4250B03E600740663 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		BB8C59B6250B056100740663 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BBC67F93250AC36600D69809 /* BLEController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
+		BBC67F99250C00B600D69809 /* SelectgDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectgDeviceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				BB8C59B2250B007400740663 /* SelectDeviceView.swift */,
 				BB8C59B4250B03E600740663 /* Device.swift */,
 				BB8C59B6250B056100740663 /* MainView.swift */,
+				BBC67F99250C00B600D69809 /* SelectgDeviceViewModel.swift */,
 			);
 			path = RemoteControl;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			files = (
 				BB25F26025084D8300DB1E60 /* AppDelegate.swift in Sources */,
 				BB8C59B7250B056100740663 /* MainView.swift in Sources */,
+				BBC67F9A250C00B600D69809 /* SelectgDeviceViewModel.swift in Sources */,
 				BB25F26225084D8300DB1E60 /* SceneDelegate.swift in Sources */,
 				BB25F26425084D8300DB1E60 /* RemoteControlView.swift in Sources */,
 				BB7A83A12509B11F009C7675 /* TwoAxisController.swift in Sources */,

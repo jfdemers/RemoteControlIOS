@@ -38,11 +38,19 @@ class Device: NSObject, CBPeripheralDelegate, Identifiable, ObservableObject {
         return peripheral.identifier.uuidString
     }
     
+    var name: String {
+        if let name = peripheral.name {
+            return name
+        }
+        
+        return "Unknown"
+    }
+    
     private var axis1Characteristic: CBCharacteristic?
     private var axis2Characteristic: CBCharacteristic?
     private var batteryCharacteristic: CBCharacteristic?
     private var logCharacteristic: CBCharacteristic?
-    
+        
     init(peripheral: CBPeripheral) {
         self.peripheral = peripheral
         super.init()
