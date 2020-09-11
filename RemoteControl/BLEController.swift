@@ -49,46 +49,51 @@ class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPer
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        var newDevices = devices
+        let newDevice = Device(peripheral: peripheral)
+        newDevices[peripheral.identifier.uuidString] = newDevice
+        devices = newDevices
+        
+        var newDeviceList: [Device] = []
+        
+        for d in devices {
+            newDeviceList.append(d.value)
+        }
+        
+        newDeviceList.sort { d1, d2 in
+            if let n1 = d1.peripheral.name, let n2 = d2.peripheral.name {
+                return n1 < n2
+            }
+            
+            return false
+        }
+        
+        deviceList = newDeviceList
+        
         if let pname = peripheral.name {
             print("Found peripheral: \(pname)")
-            
-            var newDevices = devices
-            newDevices[peripheral.identifier.uuidString] = Device(peripheral: peripheral)
-            devices = newDevices
-            
-            var newDeviceList: [Device] = []
-            
-            for d in devices {
-                newDeviceList.append(d.value)
-            }
-            
-            newDeviceList.sort { d1, d2 in
-                if let n1 = d1.peripheral.name, let n2 = d2.peripheral.name {
-                    return n1 < n2
-                }
-                
-                return false
-            }
-            
-            deviceList = newDeviceList
         }
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         connectedDevice = devices[peripheral.identifier.uuidString]
         peripheral.discoverServices([CBUUID(string: "4b541423-23b7-48e7-8a4c-a00ef3c23c7b")])
+        
+        if let device = connectedDevice {
+            device.status = .discoveringServices
+        }
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         if let device = connectedDevice {
-            device.characteristicsDiscovered = false
-            device.serviceDiscovered = false
+            device.status = .unknown
         }
         
         connectedDevice = nil
     }
     
-    func connectToDevice(device: Device) {
+    func connectToDevice(_ device: Device) {
         centralManager.connect(device.peripheral, options: nil)
+        device.status = .connecting
     }
 }
